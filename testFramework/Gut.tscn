@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/gut/plugin_control.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Gut" type="Control" parent="."]
+rect_min_size = Vector2( 1920, 1080 )
+script = ExtResource( 1 )
+_run_on_load = true
+_should_maximize = true
+_directory1 = "res://test/unit"

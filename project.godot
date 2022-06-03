@@ -1,0 +1,57 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "GutHookScript",
+"language": "GDScript",
+"path": "res://addons/gut/hook_script.gd"
+}, {
+"base": "Node",
+"class": "GutTest",
+"language": "GDScript",
+"path": "res://addons/gut/test.gd"
+} ]
+_global_script_class_icons={
+"GutHookScript": "",
+"GutTest": ""
+}
+
+[application]
+
+config/name="The Herd"
+run/main_scene="res://scenes/World.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Logger="*res://util/logger/logger.gd"
+
+[display]
+
+window/size/width=1920
+window/size/height=1200
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/gut/plugin.cfg" )
+
+[layer_names]
+
+2d_physics/layer_1="zombies"
+2d_physics/layer_2="human_beings"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
